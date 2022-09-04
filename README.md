@@ -77,7 +77,7 @@
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433397771-bfef6046-7f03-47f8-9531-4f0eee777dd3.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
 
->输入：https://github.com/javaTest03/WxPlus.git
+>输入：https://github.com/Laugh01/WxPlus.git
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433440740-0bddef69-ce2c-434e-b3b2-041b4fe16b0d.png)
 
