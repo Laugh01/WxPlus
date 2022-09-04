@@ -1,27 +1,20 @@
 package com.example.demo.config;
 
 
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- *
  * @author 程序员顾阳
+ * 自定义模板时使用这个Config类
  * @date 2022/8/24 16:17
  */
-
+@Data
 @Configuration
 public class WechatConfig {
-
-    @Value("${wechat.appId}")
-    public String appId;
-
-    @Value("${wechat.appSecret}")
-    public String appSecret;
-
-    @Value("${infor.currentCity}")
-    public String currentCity;
+    //0：使用自定义模板，禁用yml固定模板  1:使用yml固定模板 禁用自定义模板
+    public Integer id = 1;
 
     @Value("${wechat.accessTokenUrl}")
     public String accessTokenUrl;
@@ -29,24 +22,42 @@ public class WechatConfig {
     @Value("${wechat.wxTemplateUrl}")
     public String wxTemplateUrl;
 
-    @Value("${wechat.toUser}")
-    public String toUser;
+    // 申请测试公众号的appId
+    @Value("${wechat.appId}")
+    public String appId;
 
-    @Value("${wechat.templateId}")
-    public String templateId;
+    // 申请测试公众号的appSecret
+    @Value("${wechat.appSecret}")
+    public String appSecret;
 
+    // 天气Url
     @Value("${weather.url}")
     public String weatherUrl;
 
-    @Value("${weather.region}")
-    public String weatherRegion;
-
-    @Value("${infor.loveDate}")
-    public String inforLoveDate;
-
-    @Value("${infor.birthday}")
-    public String birthday;
-
+    // 申请的天行api参数值
     @Value("${tianApi}")
     public String tianApi;
+
+    // 过年日期
+    @Value("${infor.newYearDate}")
+    public String newYearDate;
+
+    // 对面扫码ID
+    public String toUser;
+
+    // 发送模板ID
+    public String templateId;
+
+    // 需要发送的天气城市（例如 福州）
+    public String weatherRegion;
+
+    // 当前天气湿度
+    public String humidity;
+
+    // 恋爱日期（格式 2000-01-01）
+    public String inforLoveDate;
+
+    // 生日（格式 2000-01-01）
+    public String birthday;
+
 }

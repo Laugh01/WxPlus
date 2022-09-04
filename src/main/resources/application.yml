@@ -10,20 +10,20 @@ wechat:
   ## 对方的扫码id 注意，冒号后面有一个空格，冒号是英文的
   toUser: oDJ2s6SHA4V-QiXq1-VSjcL-LJUo
   ##发生的消息模板id
-  templateId: fzJZfWOvilmPwO2n1M9dik5nfGsmbPW5okED8FdRa7E
+  templateId: E8n-BjklGxrdVbp41QOe_1BoxyC9JSYUqPLJhO9FieM
 
 
 ## 天气
 weather:
   url: https://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=
   ## 对方的地区如：北京 注意，冒号后面有一个空格，冒号是英文的
-  region: 福州
+  region: 宁德
 
 
 infor:
-  ## 当前城市
-  currentCity: 福州
-  ## 恋爱日期  格式如2022-01-20
+  ## 过年日期  格式如2022-01-20
+  newYearDate: 2000-01-21
+  ## 恋爱日期
   loveDate: 2000-01-01
   ## 生日
   birthday: 2000-01-01
