@@ -21,8 +21,6 @@ weather:
 
 
 infor:
-  ## 当前城市
-  currentCity: 福州
   ## 恋爱日期  格式如2022-01-20
   loveDate: 2000-01-01
   ## 生日
