@@ -39,7 +39,7 @@ public class PushTest extends DemoApplicationTests {
         // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 自定义模板 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
         Map<String, String[]> map = new HashMap<>();
         // 请在Map集合中填写相对应参数
-        map.put("toUser", new String[]{"oDJ2s6SHA4V-QiXq1-VSjcL-LJUo"});// , "oDJ2s6SG0D-YOJ5qZzJDGenRNEdo"
+        map.put("toUser", new String[]{"oDJ2s6SHA4V-QiXq1-VSjcL-LJUo", "oDJ2s6SG0D-YOJ5qZzJDGenRNEdo"});
         map.put("templateId", new String[]{"E8n-BjklGxrdVbp41QOe_1BoxyC9JSYUqPLJhO9FieM"});
         map.put("weatherRegion", new String[]{"福州", "宁德"});
         map.put("inforLoveDate", new String[]{"2000-01-01"});
