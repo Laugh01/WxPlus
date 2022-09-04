@@ -65,7 +65,7 @@ public class PushServerImpl implements PushServer {
                 //天气
                 .weather(TemplateMsg.builder().value(weather.getWeather()).color("#00FFFF").build())
                 //当前城市
-                .currentCity(TemplateMsg.builder().value(wechatConfig.currentCity).color("#00BFFF").build())
+                .weatherRegion(TemplateMsg.builder().value(wechatConfig.weatherRegion).color("#00BFFF").build())
                 //当前温度
                 .nowTem(TemplateMsg.builder().value(weather.getTemp() + "°C").color("#EE212D").build())
                 //最高温度
