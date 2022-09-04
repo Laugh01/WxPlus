@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class WechatConfig {
     //0：使用自定义模板，禁用yml固定模板  1:使用yml固定模板 禁用自定义模板
-    public Integer id = 1;
+    public Integer id = 0;
 
     @Value("${wechat.accessTokenUrl}")
     public String accessTokenUrl;
