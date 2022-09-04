@@ -2,7 +2,6 @@ package com.example.demo.server.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo.config.WechatConfig;
 import com.example.demo.config.WechatConfigBackup;
 import com.example.demo.domain.MsgBody;
 import com.example.demo.domain.MsgHead;
