@@ -17,7 +17,7 @@ public class MsgBody {
 
     private TemplateMsg date;
 
-    private TemplateMsg currentCity;
+    private TemplateMsg weatherRegion;
 
     private TemplateMsg lowTem;
 
