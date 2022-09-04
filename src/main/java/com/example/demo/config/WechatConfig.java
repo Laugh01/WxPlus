@@ -23,9 +23,6 @@ public class WechatConfig {
     @Value("${infor.currentCity}")
     public String currentCity;
 
-    @Value("${wechat.accessTokenUrl}")
-    public String accessTokenUrl;
-
     @Value("${wechat.wxTemplateUrl}")
     public String wxTemplateUrl;
 
