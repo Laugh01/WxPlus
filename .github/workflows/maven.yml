@@ -1,0 +1,44 @@
+# name指的是这套工作流程的名称，可以自定义
+name: 每日天气推送
+
+# on是指这套工作流程的trigger条件，即在push时触发
+on:
+  push:
+    # 当对分支master进行push操作的时候，这个工作流就被触发了
+    branches: [ master ]
+  pull_request:
+    #只运行特定分支master
+    branches: [ master ]
+  schedule:
+    # 定时任务 第一个数字代表分钟，第二个数字代表小时，第三个数字代表日，第四个数字代表月，第五个数字代表星期。
+    # 该cron指定的是格林尼治时间（UTC），如果需要换算成北京时间，要在该cron的基础上增加八小时得到北京时间。
+    #例如 0 1 * * * 表示在每天 格林尼治时间的 1:00 AM，也就是在北京时间的 9:00 AM 自动运行。
+    - cron: 30 23 * * *
+  workflow_dispatch:
+
+
+# jobs就是这套工作流程了
+jobs:
+
+  # build相当于<job_id>,可以自定义
+  build:
+
+    # 指定该job_id下的运行环境
+    runs-on: ubuntu-latest
+
+    # 制定运行步骤
+    steps:
+      - name: use cache to speed up the time of build
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+      # 先将仓库的代码checkout到环境中，github提供了checkout的方法，只需要我们加上这条即可
+      - uses: actions/checkout@v1
+      # 为接下来所执行的shell命名，可省略
+      - name: executing
+        run:
+          # 指定所要运行的shell
+          mvn -Dtest=PushTest#push -DskipTests=false test
+
+
